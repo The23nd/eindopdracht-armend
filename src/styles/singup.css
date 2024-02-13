@@ -1,0 +1,30 @@
+.signup-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.signup-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+.register {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

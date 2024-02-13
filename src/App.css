@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+
+	background-color:rgb(208, 201, 201);
+}
+
+.navbar {
+    background-color: #032541;
+}
+
+header {
+    min-height: 50vh;
+    background-image: url("/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+header form {
+    background-color: white;
+    border-radius: 30px;
+}
+
+header input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+
+header button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: #05B9DC;
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    min-width: 150px;
+    cursor: pointer;
+    border: none !important;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+
+.movie-list,
+.serie-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.movie-list::-webkit-scrollbar,
+.serie-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb,
+.serie-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #DBDBDB;
+}
+.youtube-container {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+}
+.foot-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+footer {
+    background-color: #032541;
+
+}
+.foot-col a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+@media (max-width:768px) {
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+    header {
+        padding: 10px;
+    }
+    header .container-fluid{
+
+        padding: 0;
+    }
+
+}
