@@ -1,0 +1,101 @@
+/* Header css */
+
+header {
+    min-height: 60vh;
+    background-image: url("../../assets/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 44px;
+    margin-top: 40px;
+}
+
+header h2 {
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.container-header {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-d-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #212121;
+    border-radius: 30px;
+    padding: 4px;
+    margin-top: 40px;
+}
+
+.header-d-flex input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.header-d-flex .submit {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #05B9DC;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header-d-flex .submit:hover {
+    background-color: #226e8f;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.error-message {
+    color: #ff4c4c;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-d-flex input,
+    .header-d-flex .submit {
+        width: 100%;
+    }
+}
