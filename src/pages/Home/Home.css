@@ -1,0 +1,22 @@
+
+.movie-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.movie-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.card {
+    min-width: 150px;
+    cursor: pointer;
+    border: none;
+    background-color: #212121;
+    color: #ffffff;
+}
+
+.card-img-top {
+    width: 100%;
+}
