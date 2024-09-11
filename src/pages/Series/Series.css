@@ -1,0 +1,81 @@
+/* Series page */
+
+.serie-list-section {
+    background-color: #121212;
+    padding: 20px 0;
+    margin: 60px auto 60px auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+
+.serie-list-title {
+    font-size: 28px;
+    color: #ffffff;
+    text-align: left;
+    margin: 0 15px 15px 15px;
+}
+
+.serie-list-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 0 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #383838 transparent;
+}
+
+.serie-list-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.serie-list-container::-webkit-scrollbar-thumb {
+    background-color: #383838;
+    border-radius: 10px;
+}
+
+.serie-list-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.serie-card {
+    background-color: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.serie-card:hover {
+    transform: scale(1.05);
+}
+
+.serie-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.serie-card-body {
+    padding: 15px;
+    color: #8f8f8f;
+}
+
+.serie-card-body b {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .serie-list-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .serie-card {
+        width: 150px;
+    }
+}
