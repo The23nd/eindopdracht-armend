@@ -16,9 +16,9 @@ const Footer = () => {
                     </article>
                     <nav className="footer-col">
                         <b>BASICS</b>
-                        <a href="https://www.instagram.com/a2m3nd">About
+                        <a href="https://www.instagram.com/a2m3nd" target="_blank">About
                             Me</a>
-                        <a href="https://www.GitHub.com/The23nd">GitHub</a>
+                        <a href="https://www.GitHub.com/The23nd" target="_blank">GitHub</a>
                         <a href="https://developer.themoviedb.org/docs"
                            target="_blank">API</a>
                     </nav>
