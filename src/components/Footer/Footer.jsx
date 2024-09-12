@@ -6,16 +6,27 @@ const Footer = () => {
         <footer>
             <div className="footer-container py-5 text-white">
                 <section className="footer-flex">
-                    <article className="footer-col">
+                    <article
+                        className="footer-col">
                         <img
                             src={logo}
                             alt="The Movie Database Logo"
                             width={100}
                         />
                     </article>
-                    <article className="footer-col">
+                    <nav className="footer-col">
+                        <b>BASICS</b>
+                        <a href="https://www.instagram.com/a2m3nd">About
+                            Me</a>
+                        <a href="https://www.GitHub.com/The23nd">GitHub</a>
+                        <a href="https://developer.themoviedb.org/docs"
+                           target="_blank">API</a>
+                    </nav>
+                    <article
+                        className="footer-col">
                         <b>TheMovieDB by</b>
-                        <p>©Armend Hajdari (NOVI Hogeschool)</p>
+                        <p>©Armend Hajdari (NOVI
+                            Hogeschool)</p>
                     </article>
                 </section>
             </div>
