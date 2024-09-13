@@ -54,7 +54,7 @@ const SearchResults = () => {
         {error && <p className="search-results__error">{error}</p>}
 
         {noResults && !loading && !error && (
-            <p className="search-results__no-results">The name you are searching for doesn't exist.</p>
+            <p className="search-results__no-results">The name you are searching for doesnt exist.</p>
         )}
 
         {results.length > 0 && (

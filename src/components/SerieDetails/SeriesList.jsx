@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import SerieCard from './SerieCard.jsx';
-import '../SerieDetails/SerieDetails.css';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import SerieCard from "./SerieCard.jsx";
+import "../SerieDetails/SerieDetails.css";
 
 const SeriesList = ({ type, name }) => {
     const [series, setSeries] = useState([]);
@@ -15,7 +15,7 @@ const SeriesList = ({ type, name }) => {
                 );
                 setSeries(response.data.results);
             } catch (error) {
-                console.error('Error fetching series data:', error);
+                console.error("Error fetching series data:", error);
             }
         };
 
@@ -23,8 +23,8 @@ const SeriesList = ({ type, name }) => {
     }, [type]);
 
     return (
-        <section className='serie-list-section'>
-            <h2 className='serie-list-title'>{name}</h2>
+        <section className="serie-list-section">
+            <h2 className="serie-list-title">{name}</h2>
             <div className="serie-list-container">
                 {series.map((serie) => (
                     <SerieCard key={serie.id} serie={serie} />

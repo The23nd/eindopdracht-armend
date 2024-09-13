@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../context/AuthContextProvider.jsx';
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../context/AuthContextProvider.jsx";
 import axios from "axios";
 import SerieCard from "../../components/SerieDetails/SerieCard.jsx";
-import MovieCard from '../../components/MovieDetails/MovieCard.jsx';
+import MovieCard from "../../components/MovieDetails/MovieCard.jsx";
 import "./MyAccount.css"
 
 const MyAccount = () => {
@@ -21,7 +21,7 @@ const MyAccount = () => {
                 );
                 setFavoriteMoviesData(favoriteMoviesDetail.map(response => response.data));
             } catch (error) {
-                console.error('Error fetching movies data:', error);
+                console.error("Error fetching movies data:", error);
             }
         };
 
@@ -39,7 +39,7 @@ const MyAccount = () => {
                     );
                     setFavoriteSeriesData(favoriteSeriesDetail.map(response => response.data));
                 } catch (error) {
-                    console.error('Error fetching series data:', error);
+                    console.error("Error fetching series data:", error);
                 }
             }
         };
@@ -54,9 +54,9 @@ const MyAccount = () => {
                 <>
                     <p>Welcome {user?.username}</p>
                     <p>username: {user?.email}</p>
-                    <section className='movie-list-section'>
-                        <h2 className='movie-list-title'>Favorite Movies</h2>
-                        <div className='movie-list-container'>
+                    <section className="movie-list-section">
+                        <h2 className="movie-list-title">Favorite Movies</h2>
+                        <div className="movie-list-container">
                             {favoriteMoviesData.length > 0 ? (
                                 favoriteMoviesData.map((movie, index) => (
                                     <MovieCard key={index} movie={movie} />
@@ -66,8 +66,8 @@ const MyAccount = () => {
                             )}
                         </div>
                     </section>
-                    <section className='serie-list-section'>
-                        <h2 className='serie-list-title'>Favorite TV Shows</h2>
+                    <section className="serie-list-section">
+                        <h2 className="serie-list-title">Favorite TV Shows</h2>
                         <div className="serie-list-container">
                             {favoriteSeriesData.length > 0 ? (
                                 favoriteSeriesData.map((serie, index) => (

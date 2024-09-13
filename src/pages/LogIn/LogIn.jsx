@@ -5,8 +5,8 @@ import { AuthContext } from "../../context/AuthContextProvider.jsx";
 import "../../pages/LogIn/LogIn.css";
 
 const LogIn = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
     const { login } = useContext(AuthContext);
 
@@ -15,7 +15,7 @@ const LogIn = () => {
         setError(false);
 
         try {
-            const result = await axios.post('https://api.datavortex.nl/mcdb/users/authenticate', {
+            const result = await axios.post("https://api.datavortex.nl/mcdb/users/authenticate", {
                 "username": username,
                 "password": password,
             });

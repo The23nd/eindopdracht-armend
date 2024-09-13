@@ -145,10 +145,10 @@ const SerieDetail = () => {
                             <div className="share-buttons">
                                 <p className="share-this-serie">Share this series:</p>
                                 <button
-                                    onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${serieUrl}`, '_blank')}>
+                                    onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${serieUrl}`, "_blank")}>
                                     <FacebookIcon size={32} round/>
                                 </button>
-                                <button onClick={() => window.open(`https://api.whatsapp.com/send?text=Check out this serie:${serieUrl}`, '_blank')}>
+                                <button onClick={() => window.open(`https://api.whatsapp.com/send?text=Check out this serie:${serieUrl}`, "_blank")}>
                                     <WhatsappIcon size={32} round/>
                                 </button>
                             </div>

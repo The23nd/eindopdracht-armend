@@ -1,5 +1,5 @@
-import logo from '../../assets/TMBD_Blue_logo.svg';
-import './Footer.css';
+import logo from "../../assets/TMBD_Blue_logo.svg";
+import "./Footer.css";
 
 const Footer = () => {
     return (
