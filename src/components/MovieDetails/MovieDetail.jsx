@@ -142,10 +142,10 @@ const MovieDetail = () => {
                   {movieUrl &&
                       <div className="share-buttons">
                         <p className="share-this-movie">Share this movie:</p>
-                        <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${movieUrl}`, '_blank')}>
+                        <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${movieUrl}`, "_blank")}>
                           <FacebookIcon size={32} round/>
                         </button>
-                        <button onClick={() => window.open(`https://api.whatsapp.com/send?text=Check out this movie:${movieUrl}`, '_blank')}>
+                        <button onClick={() => window.open(`https://api.whatsapp.com/send?text=Check out this movie:${movieUrl}`, "_blank")}>
                           <WhatsappIcon size={32} round/>
                         </button>
                       </div>

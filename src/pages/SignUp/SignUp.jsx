@@ -3,28 +3,28 @@ import "./SignUp.css";
 import axios from "axios";
 
 const SignUp = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [message, setMessage] = useState('');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [message, setMessage] = useState("");
 
     async function handleSubmit(e) {
         e.preventDefault();
 
         if (name.length < 4) {
-            setMessage('Username must be at least 4 characters long.');
+            setMessage("Username must be at least 4 characters long.");
             return;
         }
 
         if (password.length < 8) {
-            setMessage('Password must be at' +
-                ' least 8 characters long.');
+            setMessage("Password must be at" +
+                " least 8 characters long.");
             return;
         }
 
         try {
             const response = await axios.post(
-                'https://api.datavortex.nl/mcdb/users',
+                "https://api.datavortex.nl/mcdb/users",
                 {
                     email,
                     password,
@@ -39,19 +39,19 @@ const SignUp = () => {
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        'X-Api-Key': 'mcdb:tWqjvF8AfBQ7afYYRnGu'
+                        "X-Api-Key": "mcdb:tWqjvF8AfBQ7afYYRnGu"
                     }
                 }
             );
 
-            setMessage('Your registration has been successful.');
-            console.log('Response:', response.data);
+            setMessage("Your registration has been successful.");
+            console.log("Response:", response.data);
 
         } catch (error) {
 
-            setMessage('This username already' +
-                ' exists. Please try again.');
-            console.error('Error:', error);
+            setMessage("This username already" +
+                " exists. Please try again.");
+            console.error("Error:", error);
         }
     }
 

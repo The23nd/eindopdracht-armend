@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import MovieList from "../../components/MovieDetails/MovieList.jsx";
 import "./Movies.css";
 

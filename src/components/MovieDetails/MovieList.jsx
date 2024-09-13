@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import MovieCard from './MovieCard.jsx';
-import './MovieDetails.css';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import MovieCard from "./MovieCard.jsx";
+import "./MovieDetails.css";
 
 const MovieList = ({ type, name }) => {
   const [movies, setMovies] = useState([]);
@@ -15,7 +15,7 @@ const MovieList = ({ type, name }) => {
         );
         setMovies(response.data.results);
       } catch (error) {
-        console.error('Error fetching movie data:', error);
+        console.error("Error fetching movie data:", error);
       }
     };
 
@@ -23,9 +23,9 @@ const MovieList = ({ type, name }) => {
   }, [type, apiKey]);
 
   return (
-      <section className='movie-list-section'>
-        <h2 className='movie-list-title'>{name}</h2>
-        <div className='movie-list-container'>
+      <section className="movie-list-section">
+        <h2 className="movie-list-title">{name}</h2>
+        <div className="movie-list-container">
           {movies.map((movie) => (
               <MovieCard key={movie.id} movie={movie} />
           ))}

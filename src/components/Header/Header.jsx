@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Header.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
     const [text, setText] = useState("");
@@ -12,7 +12,7 @@ const Header = () => {
         const trimmedText = text.trim();
 
         if (trimmedText === "") {
-            setError("Sorry, search another title because this doesn't exist.");
+            setError("Sorry, search another title because this doesnt exist.");
         } else {
             setError("");
             navigate(`/search/${trimmedText}`);
@@ -22,16 +22,16 @@ const Header = () => {
     return (
         <header>
             <div className="container-header">
-                <h1 className='fs-1'>Welcome</h1>
+                <h1 className="fs-1">Welcome</h1>
                 <h2>Millions of movies and TV shows to discover. Explore now.</h2>
             </div>
             <div className="container-header">
-                <form className='header-d-flex' onSubmit={handleSubmit}>
-                    <label htmlFor="search" className="visually-hidden">Search for a Movie or TV show</label> {/* Verbeterde toegankelijkheid */}
+                <form className="header-d-flex" onSubmit={handleSubmit}>
+                    <label htmlFor="search" className="visually-hidden">Search for a Movie or TV show</label>
                     <input
                         id="search"
                         type="text"
-                        placeholder='Search for a Movie or a TV show...'
+                        placeholder="Search for a Movie or a TV show..."
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         aria-label="Search for a Movie or a TV show"

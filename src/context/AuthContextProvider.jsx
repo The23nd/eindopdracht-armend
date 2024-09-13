@@ -1,7 +1,7 @@
-import { createContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
-import axios from 'axios';
+import axios from "axios";
 
 export const AuthContext = createContext({});
 
@@ -9,14 +9,14 @@ function AuthContextProvider({ children }) {
     const [authState, toggleIsAuth] = useState({
         isAuth: false,
         user: null,
-        status: 'done',
+        status: "done",
         favoriteMovies: [],
         favoriteSeries: []
     });
     const navigate = useNavigate();
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem("token");
         if (token != null) {
             const decoded = jwtDecode(token);
             void fetchUserData(decoded.sub, token);
@@ -24,7 +24,7 @@ function AuthContextProvider({ children }) {
             toggleIsAuth({
                 isAuth: false,
                 user: null,
-                status: 'done',
+                status: "done",
                 favoriteMovies: [],
                 favoriteSeries: []
             });
@@ -32,9 +32,9 @@ function AuthContextProvider({ children }) {
     }, []);
 
     function login(JWT) {
-        localStorage.setItem('token', JWT);
+        localStorage.setItem("token", JWT);
         const decoded = jwtDecode(JWT);
-        fetchUserData(decoded.sub, JWT, '/');
+        fetchUserData(decoded.sub, JWT, "/");
     }
 
     function logout() {
@@ -42,12 +42,12 @@ function AuthContextProvider({ children }) {
         toggleIsAuth({
             isAuth: false,
             user: null,
-            status: 'done',
+            status: "done",
             favoriteMovies: [],
             favoriteSeries: []
         });
-        console.log('Member logged out');
-        navigate('/');
+        console.log("Member logged out");
+        navigate("/");
     }
 
     function updateFavoriteMovies() {
@@ -83,7 +83,7 @@ function AuthContextProvider({ children }) {
                     username: result.data.username,
                     email: result.data.email
                 },
-                status: 'done',
+                status: "done",
                 favoriteMovies,
                 favoriteSeries
             });
@@ -97,7 +97,7 @@ function AuthContextProvider({ children }) {
             toggleIsAuth({
                 isAuth: false,
                 user: null,
-                status: 'done',
+                status: "done",
                 favoriteMovies: [],
                 favoriteSeries: []
             });
